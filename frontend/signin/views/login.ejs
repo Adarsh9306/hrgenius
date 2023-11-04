@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="singinstyle.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>Log in</title>
+</head>
+<body background="images\backkk.png">
+  <!-- left container -->
+
+  <div class="left-container">
+    <div class="logo">
+      <img src="favicon\android-chrome-512x512.png" alt="imagee" height="60px" width="60px">
+    </div>
+    <div class="accheader"> WELCOME BACK! <br> LOG IN <br>& START<br> HIRING.</div>
+    <div class="head2">Boost your productivity and organize your<br> hire wisely with HR Genius.</div>
+  </div>
+
+  <!-- right container -->
+
+  <div class="right-container">
+    <div class="signincontainer">
+      <form action="/login" method="POST">
+        <!-- to check that the message is not undefined... i.e. it is being passed or not -->
+        <% if (typeof message !== 'undefined') { %>
+          <p class="existingUser"><%= message %></p>
+          <% } %>
+        <label name="email" class="sign1 sign">Email Address*</label>
+        <input type="email" class="sign2 sign" name="email" id="email" placeholder="Enter email address" >
+        <label name="password" class="sign3 sign">Password*</label>
+        <input type="password" class="sign4 sign" name="password" id="password" placeholder="**********" >
+        <button type="submit" role="button" class="button-36 sign">login</button>
+        
+        <!-- Google sign in button -->
+        <div class="row">
+          <div class="col-md-3">
+            <a class="btn btn-outline-dark" href="/users/googleauth" role="button" style="text-transform:none">
+              <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+              Login with Google
+            </a>
+            
+          </div>
+        </div>
+        
+        <!-- Minified CSS and JS -->
+        <link   rel="stylesheet" 
+                href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+                crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+                crossorigin="anonymous">
+        </script>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>
